@@ -1,0 +1,22 @@
+.nature {
+    padding-bottom: 180px;
+    @include media(480px){
+        display: none;
+    }
+    &__slider {
+    }
+
+    &__wrapper {
+    }
+
+    &__slide {
+        width: 870px !important;
+        height: 480px !important;
+        & img{
+            object-position: center;
+            object-fit: cover;
+            width: 100%;
+            height: auto;
+        }
+    }
+}

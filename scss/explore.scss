@@ -1,0 +1,56 @@
+.explore {
+    background-color: black;
+    &__content {
+        text-align: center;
+        text-transform: uppercase;
+        padding: 68px 0;
+        @include media(480px){
+            padding: 40px 10px;
+        }
+    }
+
+    &__title {
+        font-size: 18px;
+        font-weight: 700;
+    }
+
+    &__text {
+        font-size: 14px;
+        line-height: 40px;
+        @include media(320px){
+            font-size: 10px;     
+        }
+    }
+
+    &__slider {
+
+    }
+
+    &__slide {
+        width: 100%;
+        & img{
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+
+    &__pagination {
+    }
+
+    &__wrapper {
+    }
+
+    & .swiper-pagination-bullet{
+        background: transparent !important;
+        border: 2px solid $white;
+        width: 10px !important;
+        height: 10px !important;
+        opacity: 0.6 !important;
+    }
+    
+    & .swiper-pagination-bullet-active{
+        background: $white !important;
+        border: 0px solid $white;
+        opacity: 1 !important;
+    }
+}
