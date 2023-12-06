@@ -9,6 +9,10 @@ body{
     font-family: 'Montserrat', sans-serif;
 }
 
+html{
+    scroll-behavior: smooth
+}
+
 .container{
     display: flex;
     margin: auto;
