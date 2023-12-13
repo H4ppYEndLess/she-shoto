@@ -441,12 +441,6 @@ header {
 }
 @media (max-width: 768px) {
 	.header__list {
-		font-size: 14px;
-		gap: 40px;
-	}
-}
-@media (max-width: 480px) {
-	.header__list {
 		display: none;
 	}
 }
@@ -510,8 +504,8 @@ header {
 	position: absolute;
 	font-size: 18px;
 	text-transform: uppercase;
-	right: 10%;
-	bottom: 10%;
+	right: 5%;
+	top: 50%;
 	z-index: 2;
 }
 @media (max-width: 480px) {
@@ -525,10 +519,10 @@ header {
 .hero__name:after {
 	display: block;
 	position: absolute;
-	top: -100%;
-	left: -200%;
+	top: -50%;
+	left: 0%;
 	content: "";
-	width: 300%;
+	width: 100%;
 	height: 3px;
 	background: #FF8A00;
 }
@@ -552,9 +546,9 @@ header {
 	position: absolute;
 	top: 40%;
 	left: 10%;
-	z-index: 2;
+	z-index: 1;
 }
-@media (max-width: 320px) {
+@media (max-width: 600px) {
 	.content {
 		position: static;
 		text-align: center;
@@ -706,6 +700,7 @@ header {
 	    -ms-flex-direction: column;
 	        flex-direction: column;
 	text-align: left;
+	padding: 5%;
 }
 @media (max-width: 768px) {
 	.description__container {
@@ -810,14 +805,16 @@ header {
 		font-size: 10px;
 	}
 }
-.explore__slide {
-	width: 100%;
-}
 .explore__slide img {
-	-o-object-fit: cover;
-	   object-fit: cover;
-	-o-object-position: center;
-	   object-position: center;
+	height: auto;
+	width: 100%;
+	-o-object-fit: contain;
+	   object-fit: contain;
+	-o-object-position: bottom;
+	   object-position: bottom;
+}
+.explore__wrapper {
+	max-height: 50vh;
 }
 .explore .swiper-pagination-bullet {
 	background: transparent !important;
@@ -870,14 +867,17 @@ footer {
 	display: flex;
 	padding: 80px;
 	padding-bottom: 170px;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+	gap: 15px;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
 }
 @media (max-width: 768px) {
 	.bedlam {
 		padding: 40px;
-		-webkit-box-orient: vertical;
-		-webkit-box-direction: normal;
-		    -ms-flex-direction: column;
-		        flex-direction: column;
 		margin-bottom: 40px;
 	}
 }
@@ -944,8 +944,11 @@ footer {
 	display: -webkit-inline-box;
 	display: -ms-inline-flexbox;
 	display: inline-flex;
-	margin-left: auto;
-	gap: 300px;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
 }
 @media (max-width: 768px) {
 	.bedlam__lists {
@@ -958,7 +961,7 @@ footer {
 		-webkit-box-align: center;
 		    -ms-flex-align: center;
 		        align-items: center;
-		gap: 40px;
+		gap: 100px;
 	}
 }
 .bedlam__list {
@@ -1090,6 +1093,7 @@ footer {
 
 .menu {
 	padding: 25px;
+	padding-top: 75px;
 	z-index: 5;
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -1152,6 +1156,7 @@ footer {
 	padding: 5px 10px;
 	text-transform: uppercase;
 	font-weight: 700;
+	border: 1px solid transparent;
 }
 .menu__link:hover, .menu__link:focus {
 	border: 1px solid #FF8A00;
@@ -1172,7 +1177,7 @@ footer {
 	margin-left: auto;
 	z-index: 9999;
 }
-@media (max-width: 480px) {
+@media (max-width: 768px) {
 	.burger {
 		display: block;
 	}

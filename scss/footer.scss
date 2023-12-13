@@ -6,9 +6,11 @@ footer{
     display: flex;
     padding:80px;
     padding-bottom: 170px;
+    flex-wrap: wrap;
+    gap: 15px;
+    flex-direction: column;
     @include media(768px){
         padding: 40px;
-        flex-direction: column;
         margin-bottom: 40px;
     }
 
@@ -67,14 +69,14 @@ footer{
 
     &__lists {
         display: inline-flex;
-        margin-left: auto;
-        gap: 300px;
+        justify-content: space-between;
+        flex-wrap: wrap;
         @include media(768px){
             flex-direction: column;
             margin: 0;
             margin-top: 20px;
             align-items: center;
-            gap: 40px;
+            gap: 100px;
         }
     }
 

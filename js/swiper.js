@@ -11,10 +11,11 @@ const swiper = new Swiper('.hero__slider', {
 
 const nature = new Swiper('.nature__slider', {
       speed:1000,
-      slidesPerView:3,
+      slidesPerView:'auto',
       spaceBetween:20,
       centeredSlides:true,
       slideToClickedSlide:true,
+      loop:true,
       768:{
         slidesPerView:2,
       },
