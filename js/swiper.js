@@ -4,9 +4,9 @@ const swiper = new Swiper('.hero__slider', {
         el: '.hero__pagination',
         clickable: true,
       },
-      autoplay:{
-        delay:5000
-      },
+      // autoplay:{
+      //   delay:5000
+      // },
 });
 
 const nature = new Swiper('.nature__slider', {

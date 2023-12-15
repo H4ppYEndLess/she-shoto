@@ -7,14 +7,20 @@ footer{
     padding:80px;
     padding-bottom: 170px;
     flex-wrap: wrap;
-    gap: 15px;
-    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+    @include media(1000px){
+        flex-direction: column;
+    }
     @include media(768px){
         padding: 40px;
         margin-bottom: 40px;
     }
 
     &__main{
+        @include media(1000px){
+            margin: auto;
+        }
         @include media(768px){
             display: flex;
             flex-direction: column;
@@ -31,6 +37,9 @@ footer{
         &:hover,
         &:focus{
             color: $main-color;
+        }
+        @include media(1000px){
+            margin-bottom: 50px;
         }
         @include media(320px){
             font-size: 24px;
@@ -71,6 +80,7 @@ footer{
         display: inline-flex;
         justify-content: space-between;
         flex-wrap: wrap;
+        flex: 1;
         @include media(768px){
             flex-direction: column;
             margin: 0;
@@ -109,10 +119,12 @@ footer{
     display: flex;
     justify-content: space-between;
     position: relative;
-    @include media(768px){
+    @include media(1024px){
         flex-direction: column;
         gap: 20px;
-        align-items: center;
+    }
+    @include media(768px){
+        padding: 40px;
     }
     @include media(480px){
         text-align: center;
@@ -132,11 +144,14 @@ footer{
     &__title {
         font-size: 18px;
         text-transform: uppercase;
+        @include media(480px){
+            text-align: left;
+        }
     }
 
     &__list {
         display: flex;
-        gap: 100px;
+        justify-content: space-between;
         @include media(480px){
             flex-wrap: wrap;
             flex-direction: column;
@@ -151,6 +166,12 @@ footer{
         &:hover,
         &:focus{
             color: $main-color;
+        }
+        @include media(600px){
+            font-size: 12px;
+        }
+        @include media(480px){
+            text-align: left;
         }
     }
 }

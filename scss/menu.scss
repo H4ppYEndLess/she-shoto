@@ -94,7 +94,7 @@
     height: 30px;
     margin-left:auto;
     z-index: 9999;
-    @include media(768px){
+    @include media(1100px){
             display: block;
     }
     &::before,
@@ -109,6 +109,9 @@
     &::after{
         bottom: 0;
     }
+    &:before{
+        top: 0;
+    }
     &::after,
     &::before{
         transform: rotate(180deg);
@@ -116,7 +119,7 @@
     }
     & span{
         position: absolute;
-        background-color: $white;
+        background-color: transparent;
         left: 0;
         top: 14px;
         width: 100%;
@@ -124,24 +127,20 @@
     }
     &_close{
         position: absolute;
-        top: 20px;
-        right: 40px;  
+        right: 35px;  
         z-index: 9999;          
     }
     &_opened{
         &::before{
-            bottom: 13.5px;
+            top: 50%;
             transform: rotate(-45deg);
             transition-duration: 300ms !important;
         }
         &::after{
-            top: 13.5px;
+            top: 50%;
             transform: rotate(45deg);
             transition-duration: 300ms !important;
-        }
-        & span{
-            transform: scale(0);
-            
         }             
     }
 }
+
