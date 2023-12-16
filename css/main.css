@@ -1020,14 +1020,22 @@ footer {
 	display: -webkit-inline-box;
 	display: -ms-inline-flexbox;
 	display: inline-flex;
-	-webkit-box-pack: justify;
-	    -ms-flex-pack: justify;
-	        justify-content: space-between;
+	-webkit-box-pack: end;
+	    -ms-flex-pack: end;
+	        justify-content: flex-end;
+	gap: 50px;
 	-ms-flex-wrap: wrap;
 	    flex-wrap: wrap;
 	-webkit-box-flex: 1;
 	    -ms-flex: 1;
 	        flex: 1;
+}
+@media (max-width: 1100px) {
+	.bedlam__lists {
+		-webkit-box-pack: justify;
+		    -ms-flex-pack: justify;
+		        justify-content: space-between;
+	}
 }
 @media (max-width: 768px) {
 	.bedlam__lists {
@@ -1091,7 +1099,7 @@ footer {
 	        justify-content: space-between;
 	position: relative;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1150px) {
 	.copyright {
 		-webkit-box-orient: vertical;
 		-webkit-box-direction: normal;
@@ -1140,6 +1148,7 @@ footer {
 	-webkit-box-pack: justify;
 	    -ms-flex-pack: justify;
 	        justify-content: space-between;
+	gap: 25px;
 }
 @media (max-width: 480px) {
 	.copyright__list {
@@ -1149,7 +1158,7 @@ footer {
 		-webkit-box-direction: normal;
 		    -ms-flex-direction: column;
 		        flex-direction: column;
-		gap: 20px;
+		gap: 25px;
 	}
 }
 .copyright__link {
