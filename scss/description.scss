@@ -1,0 +1,125 @@
+.description {
+    padding-bottom: 180px;
+    @include media(768px){
+        padding-bottom: 60px;
+    }
+    @include media(320px){
+        padding-bottom: 0;        
+    }
+    &__title {
+        font-size: 36px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: $main-color;
+        max-width: 665px;
+        margin-bottom: 40px;
+        @include media(320px){
+            font-size: 18px;        
+        }
+        &_first{
+            font-size: 36px;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: $main-color;
+            max-width: 665px;            
+            @include media(320px){
+                font-size: 18px;        
+            }
+        }
+    }
+
+    &__text {
+        text-transform: uppercase;
+        max-width: 665px;
+        font-size: 14px;
+        line-height: 285%;
+        
+    }
+
+    &__content {
+        display: flex;
+        width: 100%;
+        padding: 60px 0;
+        @include media(1100px){
+            flex-direction: column;
+            padding: 0;
+        }
+    }
+
+    &__contact {
+        color: $white;
+        margin-top: 20px;
+        line-height: 40px;
+        text-transform: uppercase;
+        text-decoration: underline;
+        transition: 250ms ease-in;
+        &:hover,
+        &:focus{
+            color: $main-color;
+        }
+    }
+
+    &__image{
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        object-position: center;
+        @include media(768px){
+            width: 100%;
+            margin-bottom: 20px;
+        }
+    }
+    &__img-container{
+        height: auto;
+        overflow: hidden;
+        width: 100%;
+    }
+
+    &__container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        flex-direction: column;
+        text-align: left;
+        padding: 5%;
+        @include media(768px){
+            padding-bottom: 20px
+        }
+    }
+    &__button{
+        @include button(15px 40px, $main-color,$white,);
+        border-radius: 8px;
+        transition: 250ms ease-in;
+        margin-top: 140px;
+        &:hover,
+        &:focus{
+            background-color: $bg;
+            border: 1px solid $main-color;
+        }
+        @include media(768px){
+            margin-top: 60px;
+        }
+    }
+
+    &__small{
+        @include media(480px){
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            padding: 0 15px;
+        }
+    }
+}
+
+.reverse{
+    @include media(768px){
+        flex-direction: column-reverse
+    }
+}
+
+.last{
+    @include media(320px){
+        margin-bottom: 0;   
+    }
+}

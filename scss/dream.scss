@@ -1,0 +1,25 @@
+.dream {
+
+    &__title {
+        color: $main-color;
+        font-size: 36px;
+        font-weight: 700;
+        text-transform: uppercase;
+        max-width: 40%;
+        @include media(768px){
+            max-width: 100%;
+        }
+        @include media(320px){
+            font-size: 18px;        
+        }
+    }
+
+    &__text {
+        max-width: 40%;
+        font-size: 14px;
+        line-height: 40px;
+        @include media(768px){
+            max-width: 100%;
+        }
+    }
+}

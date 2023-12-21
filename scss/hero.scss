@@ -1,0 +1,176 @@
+@import './variables.scss';
+@import './mixin.scss';
+
+.hero {
+    width: 100%;
+    position: relative;
+    &__mobile{
+        @include media(768px){
+            width:  100%;
+        }
+    }
+    &__description {
+        position: absolute;	
+        right: 10%;
+        bottom: 35%;
+        font-size: 24px;
+        color: $white;
+        z-index: 2;
+        @include media(1100px){
+            bottom: 10%;
+        }
+        @include media(950px){
+            bottom: 30%;
+        }
+        @include media(650px){
+            bottom: 5%;
+            font-size: 16px;
+        }
+        @include media(480px){
+            right: unset;
+            left: 5%;
+        }
+        @include media(340px){
+            bottom: 3%;
+        }
+        @include media(320px){
+            bottom: 0;
+        }
+    }
+
+	&__car-name {
+        &::after{
+            content: '';
+            position: absolute;
+            background: $main-color;
+            width: 100%;
+            height: 3px;
+            top: -50%;
+            left: 0;
+        }
+	}
+
+    & .swiper-pagination-bullet{
+        background: transparent !important;
+        border: 2px solid $white;
+        width: 10px !important;
+        height: 10px !important;
+        opacity: 0.6 !important;
+    }
+    
+    & .swiper-pagination-bullet-active{
+        background: $main-color !important;
+        border: 0px solid $white;
+        opacity: 1 !important;
+    }
+
+    &__slider {
+        max-width: 100vw;
+        max-height: 100vh;
+    }
+
+    &__wrapper {
+    }
+
+    &__slide {
+        position: relative;
+        &::after{
+            position: absolute;
+            display: block;
+            content: "";
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            background: rgba(0, 0, 0, 0.40);
+            z-index: 1;
+        }
+    }
+
+    &__sub{
+        position: absolute;
+        font-size: 18px;
+        text-transform: uppercase;
+        right: 5%;
+        top: 50%;
+        z-index: 2;
+        @include media(480px){
+            display: none;
+        }
+    }
+    &__name{
+        position: relative;
+        &:after{
+            display: block;
+            position: absolute;
+            top: -50%;
+            left: 0%;
+            content: "";
+            width: 100%;
+            height: 3px;    
+            background: $main-color;
+        }
+    }
+
+    &__pagination{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        top: 50% !important;
+        right: 5% !important;
+        left: unset !important;
+        bottom: unset !important;
+        width: auto !important;
+    }
+}
+
+.content {
+    position: absolute;
+    top: 40%;
+    left: 10%;
+    z-index: 1;
+    @include media(600px){    
+        margin-top: 20px;
+    }
+    @include media(480px){
+        top: 20%;
+    }
+    &__title {
+        font-size: 48px;
+        font-weight: 700;
+        text-transform: uppercase;
+        max-width: 870px;
+        pointer-events: none;
+        @include media(700px){
+            font-size: 34px;        
+        }
+        @include media(480px){
+            font-size: 22px;        
+        }
+    }
+
+    &__text {
+        line-height: 250%;
+        font-size: 16px;
+        max-width: 670px;
+        margin: 40px 0 80px 0;
+        pointer-events: none;
+        @include media(480px){
+            margin: 20px 0;    
+        }
+    }
+
+    &__button{
+        @include button(15px 40px, $main-color,$white,);
+        border-radius: 8px;
+        transition: 250ms ease-in;
+        &:hover,
+        &:focus{
+            background-color: $bg;
+        }
+        @include media(480px){
+            padding: 5px 15px;    
+        }
+    }
+}
